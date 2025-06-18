@@ -1,6 +1,20 @@
 # Keploy's blog with Next.js and WordPress
+A developer blog website built using **Next.js** and powered by a **WordPress backend** via **GraphQL**.  
+This repo is part of [Keploy](https://github.com/keploy)'s documentation and content ecosystem.
 
-## Configuration
+## 🚀 Live Website
+👉 [Keploy Blog](https://keploy.io/blog)
+
+## ⚙️ Configuration
+Follow these steps to configure and run the Keploy Blog Website locally using WordPress and GraphQL.
+
+### 🛠 Prerequisites
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or above)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- A working [WordPress](https://wordpress.com/) site (local or hosted)
+- The [WPGraphQL](https://www.wpgraphql.com/) plugin installed and activated in WordPress
 
 ### Step 1. Prepare your WordPress site
 
@@ -75,3 +89,13 @@ Your blog should be up and running on http://localhost:3000! If it doesn't work,
 
 
 For CSS files being rendered at vercel and not on keploy enpoint - we set generic redirection /blogs/* on cloudfront. 
+
+
+### 🔄 Vercel Deployment & CloudFront Notes
+This blog is deployed on **Vercel** and accessed via a subpath like `/blogs` on the Keploy site.
+
+To ensure styles and routes work correctly:
+
+✅ **CloudFront** is configured to redirect `/blogs/*` to this app’s base path.  
+This helps resolve issues with static asset rendering (like CSS) in production.
+
